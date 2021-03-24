@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <script src="1616624000_files/d3.js"></script>
+  <style>
+    body {
+      font: 14px sans-serif;
+    }
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+    svg {
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var data = [
+      {"name":"pdfarranger/pdfarranger", "values":[
+        {"time":1451992662, "stars":0},
+        {"time":1451992663, "stars":1},
+        {"time":1453212932, "stars":2},
+        {"time":1458929517, "stars":3},
+        {"time":1474744998, "stars":4},
+        {"time":1476885504, "stars":5},
+        {"time":1485618336, "stars":6},
+        {"time":1489452912, "stars":7},
+        {"time":1504191352, "stars":8},
+        {"time":1505394908, "stars":9},
+        {"time":1522153290, "stars":10},
+        {"time":1522783326, "stars":11},
+        {"time":1530770832, "stars":12},
+        {"time":1531076143, "stars":13},
+        {"time":1532179437, "stars":14},
+        {"time":1532384085, "stars":15},
+        {"time":1533129302, "stars":16},
+        {"time":1534159627, "stars":17},
+        {"time":1539679913, "stars":18},
+        {"time":1542290755, "stars":19},
+        {"time":1542636066, "stars":20},
+        {"time":1543069576, "stars":21},
+        {"time":1544727194, "stars":22},
+        {"time":1544749485, "stars":23},
+        {"time":1544755716, "stars":24},
+        {"time":1544803721, "stars":25},
+        {"time":1544812617, "stars":26},
+        {"time":1544855289, "stars":27},
+        {"time":1545167692, "stars":28},
+        {"time":1545180697, "stars":29},
+        {"time":1545215756, "stars":30},
+        {"time":1546107208, "stars":31},
+        {"time":1546249987, "stars":32},
+        {"time":1546393324, "stars":33},
+        {"time":1546463282, "stars":34},
+        {"time":1546486963, "stars":35},
+        {"time":1546489874, "stars":36},
+        {"time":1546534015, "stars":37},
+        {"time":1546633052, "stars":38},
+        {"time":1546697755, "stars":39},
+        {"time":1546875994, "stars":40},
+        {"time":1546915357, "stars":41},
+        {"time":1547023955, "stars":42},
+        {"time":1547394756, "stars":43},
+        {"time":1547465297, "stars":44},
+        {"time":1547480139, "stars":45},
+        {"time":1547878475, "stars":46},
+        {"time":1547982615, "stars":47},
+        {"time":1548584937, "stars":48},
+        {"time":1549486894, "stars":49},
+        {"time":1549831272, "stars":50},
+        {"time":1552616278, "stars":51},
+        {"time":1552943478, "stars":52},
+        {"time":1553377916, "stars":53},
+        {"time":1553703682, "stars":54},
+        {"time":1553846360, "stars":55},
+        {"time":1554269369, "stars":56},
+        {"time":1554270558, "stars":57},
+        {"time":1554272446, "stars":58},
+        {"time":1554282222, "stars":59},
+        {"time":1554288478, "stars":60},
+        {"time":1554288638, "stars":61},
+        {"time":1554293241, "stars":62},
+        {"time":1554302513, "stars":63},
+        {"time":1554302871, "stars":64},
+        {"time":1554303207, "stars":65},
+        {"time":1554304553, "stars":66},
+        {"time":1554316797, "stars":67},
+        {"time":1554317787, "stars":68},
+        {"time":1554322007, "stars":69},
+        {"time":1554327506, "stars":70},
+        {"time":1554333002, "stars":71},
+        {"time":1554352506, "stars":72},
+        {"time":1554355023, "stars":73},
+        {"time":1554356624, "stars":74},
+        {"time":1554367169, "stars":75},
+        {"time":1554375155, "stars":76},
+        {"time":1554398314, "stars":77},
+        {"time":1554402937, "stars":78},
+        {"time":1554538180, "stars":79},
+        {"time":1554543162, "stars":80},
+        {"time":1554557378, "stars":81},
+        {"time":1554583290, "stars":82},
+        {"time":1554646050, "stars":83},
+        {"time":1554657312, "stars":84},
+        {"time":1554790528, "stars":85},
+        {"time":1554810715, "stars":86},
+        {"time":1554873011, "stars":87},
+        {"time":1555078188, "stars":88},
+        {"time":1555398101, "stars":89},
+        {"time":1555682192, "stars":90},
+        {"time":1555845730, "stars":91},
+        {"time":1556057822, "stars":92},
+        {"time":1556087459, "stars":93},
+        {"time":1556091073, "stars":94},
+        {"time":1556097016, "stars":95},
+        {"time":1556108875, "stars":96},
+        {"time":1556119792, "stars":97},
+        {"time":1556133531, "stars":98},
+        {"time":1556201008, "stars":99},
+        {"time":1556483593, "stars":100},
+        {"time":1556919552, "stars":101},
+        {"time":1556996704, "stars":102},
+        {"time":1557095443, "stars":103},
+        {"time":1557234444, "stars":104},
+        {"time":1557405748, "stars":105},
+        {"time":1557407544, "stars":106},
+        {"time":1557475570, "stars":107},
+        {"time":1557478363, "stars":108},
+        {"time":1557487987, "stars":109},
+        {"time":1557505391, "stars":110},
+        {"time":1557514922, "stars":111},
+        {"time":1557654318, "stars":112},
+        {"time":1557662111, "stars":113},
+        {"time":1557679227, "stars":114},
+        {"time":1557779585, "stars":115},
+        {"time":1557846224, "stars":116},
+        {"time":1557856003, "stars":117},
+        {"time":1557877072, "stars":118},
+        {"time":1557935206, "stars":119},
+        {"time":1557971066, "stars":120},
+        {"time":1558047259, "stars":121},
+        {"time":1558063443, "stars":122},
+        {"time":1558119540, "stars":123},
+        {"time":1558273450, "stars":124},
+        {"time":1558446095, "stars":125},
+        {"time":1558467819, "stars":126},
+        {"time":1558876462, "stars":127},
+        {"time":1559028651, "stars":128},
+        {"time":1559202671, "stars":129},
+        {"time":1559451487, "stars":130},
+        {"time":1559461065, "stars":131},
+        {"time":1559465920, "stars":132},
+        {"time":1559563079, "stars":133},
+        {"time":1560238054, "stars":134},
+        {"time":1560249936, "stars":135},
+        {"time":1560325220, "stars":136},
+        {"time":1560614045, "stars":137},
+        {"time":1560745321, "stars":138},
+        {"time":1560750301, "stars":139},
+        {"time":1560808800, "stars":140},
+        {"time":1560839819, "stars":141},
+        {"time":1560858557, "stars":142},
+        {"time":1561595374, "stars":143},
+        {"time":1561624365, "stars":144},
+        {"time":1562139631, "stars":145},
+        {"time":1562356606, "stars":146},
+        {"time":1563167553, "stars":147},
+        {"time":1563909116, "stars":148},
+        {"time":1564140758, "stars":149},
+        {"time":1564265391, "stars":150},
+        {"time":1564592065, "stars":151},
+        {"time":1564653689, "stars":152},
+        {"time":1565148855, "stars":153},
+        {"time":1565200964, "stars":154},
+        {"time":1567757368, "stars":155},
+        {"time":1568165204, "stars":156},
+        {"time":1568195057, "stars":157},
+        {"time":1568293057, "stars":158},
+        {"time":1568301480, "stars":159},
+        {"time":1568446779, "stars":160},
+        {"time":1568574670, "stars":161},
+        {"time":1568723925, "stars":162},
+        {"time":1569107329, "stars":163},
+        {"time":1569598613, "stars":164},
+        {"time":1569686263, "stars":165},
+        {"time":1569686903, "stars":166},
+        {"time":1570207138, "stars":167},
+        {"time":1570608624, "stars":168},
+        {"time":1570726735, "stars":169},
+        {"time":1570898821, "stars":170},
+        {"time":1571193648, "stars":171},
+        {"time":1571331780, "stars":172},
+        {"time":1571508190, "stars":173},
+        {"time":1571626547, "stars":174},
+        {"time":1571658665, "stars":175},
+        {"time":1571671667, "stars":176},
+        {"time":1571708437, "stars":177},
+        {"time":1571740468, "stars":178},
+        {"time":1571813975, "stars":179},
+        {"time":1571832615, "stars":180},
+        {"time":1571945809, "stars":181},
+        {"time":1571953540, "stars":182},
+        {"time":1572092651, "stars":183},
+        {"time":1572123620, "stars":184},
+        {"time":1572250202, "stars":185},
+        {"time":1572637615, "stars":186},
+        {"time":1572851883, "stars":187},
+        {"time":1572858868, "stars":188},
+        {"time":1572870767, "stars":189},
+        {"time":1572877804, "stars":190},
+        {"time":1572957846, "stars":191},
+        {"time":1572968747, "stars":192},
+        {"time":1573022259, "stars":193},
+        {"time":1573188522, "stars":194},
+        {"time":1573236837, "stars":195},
+        {"time":1573544066, "stars":196},
+        {"time":1573649306, "stars":197},
+        {"time":1573845241, "stars":198},
+        {"time":1574130463, "stars":199},
+        {"time":1574154087, "stars":200},
+        {"time":1574730816, "stars":201},
+        {"time":1574743246, "stars":202},
+        {"time":1575467231, "stars":203},
+        {"time":1575742606, "stars":204},
+        {"time":1575971255, "stars":205},
+        {"time":1576080224, "stars":206},
+        {"time":1576590446, "stars":207},
+        {"time":1576632038, "stars":208},
+        {"time":1576889206, "stars":209},
+        {"time":1577012210, "stars":210},
+        {"time":1577386728, "stars":211},
+        {"time":1577415405, "stars":212},
+        {"time":1577792922, "stars":213},
+        {"time":1578624853, "stars":214},
+        {"time":1579470847, "stars":215},
+        {"time":1579512391, "stars":216},
+        {"time":1579789961, "stars":217},
+        {"time":1579947082, "stars":218},
+        {"time":1580111166, "stars":219},
+        {"time":1580212156, "stars":220},
+        {"time":1580500559, "stars":221},
+        {"time":1580556422, "stars":222},
+        {"time":1580637881, "stars":223},
+        {"time":1580937179, "stars":224},
+        {"time":1582216185, "stars":225},
+        {"time":1582565306, "stars":226},
+        {"time":1582627388, "stars":227},
+        {"time":1583048995, "stars":228},
+        {"time":1583347669, "stars":229},
+        {"time":1583748570, "stars":230},
+        {"time":1583865071, "stars":231},
+        {"time":1583916644, "stars":232},
+        {"time":1583959944, "stars":233},
+        {"time":1584277685, "stars":234},
+        {"time":1584285065, "stars":235},
+        {"time":1584387798, "stars":236},
+        {"time":1584443748, "stars":237},
+        {"time":1584680056, "stars":238},
+        {"time":1585277106, "stars":239},
+        {"time":1585474366, "stars":240},
+        {"time":1585634039, "stars":241},
+        {"time":1585878958, "stars":242},
+        {"time":1586004790, "stars":243},
+        {"time":1586013369, "stars":244},
+        {"time":1586513210, "stars":245},
+        {"time":1586779160, "stars":246},
+        {"time":1586905904, "stars":247},
+        {"time":1586917930, "stars":248},
+        {"time":1586958916, "stars":249},
+        {"time":1586972346, "stars":250},
+        {"time":1587067266, "stars":251},
+        {"time":1587118255, "stars":252},
+        {"time":1587144659, "stars":253},
+        {"time":1587266602, "stars":254},
+        {"time":1587315297, "stars":255},
+        {"time":1587411701, "stars":256},
+        {"time":1587461116, "stars":257},
+        {"time":1587716174, "stars":258},
+        {"time":1587833693, "stars":259},
+        {"time":1587920999, "stars":260},
+        {"time":1588038368, "stars":261},
+        {"time":1588043535, "stars":262},
+        {"time":1588127271, "stars":263},
+        {"time":1588257612, "stars":264},
+        {"time":1588265503, "stars":265},
+        {"time":1588392881, "stars":266},
+        {"time":1588483691, "stars":267},
+        {"time":1588608324, "stars":268},
+        {"time":1588689702, "stars":269},
+        {"time":1588891209, "stars":270},
+        {"time":1588931491, "stars":271},
+        {"time":1589206493, "stars":272},
+        {"time":1589239598, "stars":273},
+        {"time":1589315680, "stars":274},
+        {"time":1589541219, "stars":275},
+        {"time":1589572546, "stars":276},
+        {"time":1589651683, "stars":277},
+        {"time":1589675532, "stars":278},
+        {"time":1589733320, "stars":279},
+        {"time":1589897282, "stars":280},
+        {"time":1589903513, "stars":281},
+        {"time":1589930862, "stars":282},
+        {"time":1589935433, "stars":283},
+        {"time":1590239972, "stars":284},
+        {"time":1590505014, "stars":285},
+        {"time":1590541906, "stars":286},
+        {"time":1590733140, "stars":287},
+        {"time":1590746722, "stars":288},
+        {"time":1591087884, "stars":289},
+        {"time":1591361496, "stars":290},
+        {"time":1591435740, "stars":291},
+        {"time":1591436683, "stars":292},
+        {"time":1591753454, "stars":293},
+        {"time":1592432601, "stars":294},
+        {"time":1592438649, "stars":295},
+        {"time":1592448784, "stars":296},
+        {"time":1592663767, "stars":297},
+        {"time":1592729289, "stars":298},
+        {"time":1592830820, "stars":299},
+        {"time":1592839450, "stars":300},
+        {"time":1593173505, "stars":301},
+        {"time":1593575276, "stars":302},
+        {"time":1593601225, "stars":303},
+        {"time":1593693843, "stars":304},
+        {"time":1593775987, "stars":305},
+        {"time":1593789515, "stars":306},
+        {"time":1594133841, "stars":307},
+        {"time":1594402047, "stars":308},
+        {"time":1594751398, "stars":309},
+        {"time":1594785921, "stars":310},
+        {"time":1594893317, "stars":311},
+        {"time":1594900725, "stars":312},
+        {"time":1595068855, "stars":313},
+        {"time":1595126705, "stars":314},
+        {"time":1595199335, "stars":315},
+        {"time":1595208836, "stars":316},
+        {"time":1595229628, "stars":317},
+        {"time":1595241081, "stars":318},
+        {"time":1595248509, "stars":319},
+        {"time":1595418832, "stars":320},
+        {"time":1595647565, "stars":321},
+        {"time":1595690182, "stars":322},
+        {"time":1595706741, "stars":323},
+        {"time":1595866718, "stars":324},
+        {"time":1596003607, "stars":325},
+        {"time":1596063389, "stars":326},
+        {"time":1596236501, "stars":327},
+        {"time":1596376030, "stars":328},
+        {"time":1596446153, "stars":329},
+        {"time":1596479295, "stars":330},
+        {"time":1596479315, "stars":331},
+        {"time":1596601461, "stars":332},
+        {"time":1596712994, "stars":333},
+        {"time":1596943592, "stars":334},
+        {"time":1597003924, "stars":335},
+        {"time":1597013995, "stars":336},
+        {"time":1597178375, "stars":337},
+        {"time":1597353541, "stars":338},
+        {"time":1597399545, "stars":339},
+        {"time":1597672503, "stars":340},
+        {"time":1597678132, "stars":341},
+        {"time":1597755305, "stars":342},
+        {"time":1597834588, "stars":343},
+        {"time":1597850014, "stars":344},
+        {"time":1597923172, "stars":345},
+        {"time":1598198791, "stars":346},
+        {"time":1598274627, "stars":347},
+        {"time":1598386361, "stars":348},
+        {"time":1598440921, "stars":349},
+        {"time":1598542024, "stars":350},
+        {"time":1598643123, "stars":351},
+        {"time":1598649317, "stars":352},
+        {"time":1598793561, "stars":353},
+        {"time":1598805461, "stars":354},
+        {"time":1598808720, "stars":355},
+        {"time":1598854179, "stars":356},
+        {"time":1598888980, "stars":357},
+        {"time":1598921524, "stars":358},
+        {"time":1598980628, "stars":359},
+        {"time":1599308365, "stars":360},
+        {"time":1599916510, "stars":361},
+        {"time":1600035704, "stars":362},
+        {"time":1600097650, "stars":363},
+        {"time":1600195826, "stars":364},
+        {"time":1600199220, "stars":365},
+        {"time":1600273334, "stars":366},
+        {"time":1600473951, "stars":367},
+        {"time":1600514997, "stars":368},
+        {"time":1600543535, "stars":369},
+        {"time":1600718710, "stars":370},
+        {"time":1600785081, "stars":371},
+        {"time":1600905169, "stars":372},
+        {"time":1601085647, "stars":373},
+        {"time":1601170883, "stars":374},
+        {"time":1601210632, "stars":375},
+        {"time":1601364239, "stars":376},
+        {"time":1601371564, "stars":377},
+        {"time":1601450244, "stars":378},
+        {"time":1601563460, "stars":379},
+        {"time":1601666058, "stars":380},
+        {"time":1601813177, "stars":381},
+        {"time":1601846667, "stars":382},
+        {"time":1601964496, "stars":383},
+        {"time":1602157683, "stars":384},
+        {"time":1602378721, "stars":385},
+        {"time":1602419756, "stars":386},
+        {"time":1602604567, "stars":387},
+        {"time":1602630015, "stars":388},
+        {"time":1602635180, "stars":389},
+        {"time":1602692693, "stars":390},
+        {"time":1603008892, "stars":391},
+        {"time":1603136889, "stars":392},
+        {"time":1603174619, "stars":393},
+        {"time":1603196631, "stars":394},
+        {"time":1603331657, "stars":395},
+        {"time":1603346070, "stars":396},
+        {"time":1603636163, "stars":397},
+        {"time":1603659071, "stars":398},
+        {"time":1603755319, "stars":399},
+        {"time":1603789381, "stars":400},
+        {"time":1603792069, "stars":401},
+        {"time":1603873033, "stars":402},
+        {"time":1603926301, "stars":403},
+        {"time":1603978742, "stars":404},
+        {"time":1604304559, "stars":405},
+        {"time":1604340370, "stars":406},
+        {"time":1604583331, "stars":407},
+        {"time":1604587188, "stars":408},
+        {"time":1604587613, "stars":409},
+        {"time":1604589175, "stars":410},
+        {"time":1604594212, "stars":411},
+        {"time":1604599802, "stars":412},
+        {"time":1604607072, "stars":413},
+        {"time":1604612857, "stars":414},
+        {"time":1604674102, "stars":415},
+        {"time":1604683654, "stars":416},
+        {"time":1604741577, "stars":417},
+        {"time":1604761133, "stars":418},
+        {"time":1604824913, "stars":419},
+        {"time":1604869882, "stars":420},
+        {"time":1604915260, "stars":421},
+        {"time":1604950440, "stars":422},
+        {"time":1605121813, "stars":423},
+        {"time":1605125332, "stars":424},
+        {"time":1605166306, "stars":425},
+        {"time":1605175449, "stars":426},
+        {"time":1605266105, "stars":427},
+        {"time":1605272266, "stars":428},
+        {"time":1605274362, "stars":429},
+        {"time":1605280837, "stars":430},
+        {"time":1605530193, "stars":431},
+        {"time":1605532251, "stars":432},
+        {"time":1605538357, "stars":433},
+        {"time":1606016241, "stars":434},
+        {"time":1606229215, "stars":435},
+        {"time":1606393692, "stars":436},
+        {"time":1606393991, "stars":437},
+        {"time":1606419841, "stars":438},
+        {"time":1606481776, "stars":439},
+        {"time":1606667582, "stars":440},
+        {"time":1606728283, "stars":441},
+        {"time":1606728836, "stars":442},
+        {"time":1606752488, "stars":443},
+        {"time":1606826183, "stars":444},
+        {"time":1606917392, "stars":445},
+        {"time":1606935209, "stars":446},
+        {"time":1607128334, "stars":447},
+        {"time":1607236745, "stars":448},
+        {"time":1607256555, "stars":449},
+        {"time":1607281116, "stars":450},
+        {"time":1607378531, "stars":451},
+        {"time":1607427335, "stars":452},
+        {"time":1607437422, "stars":453},
+        {"time":1607560359, "stars":454},
+        {"time":1607701309, "stars":455},
+        {"time":1607773612, "stars":456},
+        {"time":1607782145, "stars":457},
+        {"time":1607895687, "stars":458},
+        {"time":1607923994, "stars":459},
+        {"time":1607936053, "stars":460},
+        {"time":1608026770, "stars":461},
+        {"time":1608118580, "stars":462},
+        {"time":1608160619, "stars":463},
+        {"time":1608361975, "stars":464},
+        {"time":1608461558, "stars":465},
+        {"time":1608784838, "stars":466},
+        {"time":1609261517, "stars":467},
+        {"time":1609341024, "stars":468},
+        {"time":1609592743, "stars":469},
+        {"time":1609771809, "stars":470},
+        {"time":1609820960, "stars":471},
+        {"time":1609862372, "stars":472},
+        {"time":1609863034, "stars":473},
+        {"time":1609989228, "stars":474},
+        {"time":1610455704, "stars":475},
+        {"time":1610455750, "stars":476},
+        {"time":1610613629, "stars":477},
+        {"time":1610651978, "stars":478},
+        {"time":1610770388, "stars":479},
+        {"time":1610879242, "stars":480},
+        {"time":1611045255, "stars":481},
+        {"time":1611155889, "stars":482},
+        {"time":1611254399, "stars":483},
+        {"time":1611396825, "stars":484},
+        {"time":1611406443, "stars":485},
+        {"time":1611421869, "stars":486},
+        {"time":1611579131, "stars":487},
+        {"time":1611581383, "stars":488},
+        {"time":1611588730, "stars":489},
+        {"time":1611590766, "stars":490},
+        {"time":1611594811, "stars":491},
+        {"time":1611630809, "stars":492},
+        {"time":1611652727, "stars":493},
+        {"time":1611653420, "stars":494},
+        {"time":1611660048, "stars":495},
+        {"time":1611660102, "stars":496},
+        {"time":1611660113, "stars":497},
+        {"time":1611663608, "stars":498},
+        {"time":1611670515, "stars":499},
+        {"time":1611675950, "stars":500},
+        {"time":1611683794, "stars":501},
+        {"time":1611688885, "stars":502},
+        {"time":1611710709, "stars":503},
+        {"time":1611745770, "stars":504},
+        {"time":1611826629, "stars":505},
+        {"time":1612085476, "stars":506},
+        {"time":1612089030, "stars":507},
+        {"time":1612174323, "stars":508},
+        {"time":1612190553, "stars":509},
+        {"time":1612192699, "stars":510},
+        {"time":1612253606, "stars":511},
+        {"time":1612292569, "stars":512},
+        {"time":1612326019, "stars":513},
+        {"time":1612352184, "stars":514},
+        {"time":1612357964, "stars":515},
+        {"time":1612367026, "stars":516},
+        {"time":1612390519, "stars":517},
+        {"time":1612425324, "stars":518},
+        {"time":1612459602, "stars":519},
+        {"time":1612478831, "stars":520},
+        {"time":1612521671, "stars":521},
+        {"time":1612559684, "stars":522},
+        {"time":1612772039, "stars":523},
+        {"time":1612867705, "stars":524},
+        {"time":1612870986, "stars":525},
+        {"time":1612876812, "stars":526},
+        {"time":1612927455, "stars":527},
+        {"time":1612987146, "stars":528},
+        {"time":1612989745, "stars":529},
+        {"time":1613036357, "stars":530},
+        {"time":1613041371, "stars":531},
+        {"time":1613067199, "stars":532},
+        {"time":1613135153, "stars":533},
+        {"time":1613170665, "stars":534},
+        {"time":1613276454, "stars":535},
+        {"time":1613326631, "stars":536},
+        {"time":1613332863, "stars":537},
+        {"time":1613373393, "stars":538},
+        {"time":1613503531, "stars":539},
+        {"time":1613520747, "stars":540},
+        {"time":1613576296, "stars":541},
+        {"time":1613616693, "stars":542},
+        {"time":1613629622, "stars":543},
+        {"time":1613737092, "stars":544},
+        {"time":1613739162, "stars":545},
+        {"time":1613807807, "stars":546},
+        {"time":1613926024, "stars":547},
+        {"time":1613971225, "stars":548},
+        {"time":1614000694, "stars":549},
+        {"time":1614021391, "stars":550},
+        {"time":1614147824, "stars":551},
+        {"time":1614186418, "stars":552},
+        {"time":1614199219, "stars":553},
+        {"time":1614216517, "stars":554},
+        {"time":1614245891, "stars":555},
+        {"time":1614249048, "stars":556},
+        {"time":1614319643, "stars":557},
+        {"time":1614358431, "stars":558},
+        {"time":1614448828, "stars":559},
+        {"time":1614499488, "stars":560},
+        {"time":1614760129, "stars":561},
+        {"time":1614805043, "stars":562},
+        {"time":1614865344, "stars":563},
+        {"time":1614945839, "stars":564},
+        {"time":1615006689, "stars":565},
+        {"time":1615078143, "stars":566},
+        {"time":1615167690, "stars":567},
+        {"time":1615217984, "stars":568},
+        {"time":1615320452, "stars":569},
+        {"time":1615373195, "stars":570},
+        {"time":1615383911, "stars":571},
+        {"time":1615390113, "stars":572},
+        {"time":1615406811, "stars":573},
+        {"time":1615407398, "stars":574},
+        {"time":1615412728, "stars":575},
+        {"time":1615453167, "stars":576},
+        {"time":1615666586, "stars":577},
+        {"time":1615867473, "stars":578},
+        {"time":1615912797, "stars":579},
+        {"time":1615931015, "stars":580},
+        {"time":1615947270, "stars":581},
+        {"time":1616027506, "stars":582},
+        {"time":1616029910, "stars":583},
+        {"time":1616154859, "stars":584},
+        {"time":1616192180, "stars":585},
+        {"time":1616224792, "stars":586},
+        {"time":1616235861, "stars":587},
+        {"time":1616243844, "stars":588},
+        {"time":1616259706, "stars":589},
+        {"time":1616328802, "stars":590},
+        {"time":1616334042, "stars":591},
+        {"time":1616356373, "stars":592},
+        {"time":1616372883, "stars":593},
+        {"time":1616391489, "stars":594},
+        {"time":1616439816, "stars":595},
+        {"time":1616570965, "stars":596},
+        {"time":1616588096, "stars":597},
+        {"time":1616592676, "stars":598},
+        {"time":1616624000, "stars":598},
+      ]},
+    ];
+
+    var margin = { top: 20, right: 100, bottom: 30, left: 50 };
+    var width = 950 - margin.left - margin.right;
+    var height = 500 - margin.top - margin.bottom;
+
+    var x = d3.scaleTime().range([0, width]);
+    var y = d3.scaleLinear().range([height, 0]);
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
+    var xAxis = d3.axisBottom(x);
+    var yAxis = d3.axisLeft(y);
+
+    var line = d3.line()
+      .x(function(d) {
+        return x(d.time);
+      })
+      .y(function(d) {
+        return y(d.stars);
+      });
+
+    var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    color.domain(data.map(function(dataset) {
+      return dataset.name;
+    }));
+
+    data.forEach(function(dataset) {
+      dataset.values.forEach(function(d) {
+        d.time = new Date(d.time * 1000);
+      });
+    });
+    
+    var minDate = d3.min(data, function(dataset) {
+      return dataset.values[0].time;
+    });
+    var maxDate = d3.max(data, function(dataset) {
+      return dataset.values[dataset.values.length - 1].time;
+    });
+    x.domain([
+      (21 * minDate - maxDate) / 20,
+      maxDate,
+    ]);
+    y.domain([
+      0,
+      1.025 * d3.max(data, function(c) {
+        return d3.max(c.values, function(v) {
+          return v.stars;
+        });
+      })
+    ]);
+
+    var legend = svg.selectAll('g')
+      .data(data)
+      .enter()
+      .append('g')
+      .attr('class', 'legend');
+
+    legend.append('rect')
+      .attr('x', 50)
+      .attr('y', function(d, i) {
+        return i * 20;
+      })
+      .attr('width', 10)
+      .attr('height', 10)
+      .style('fill', function(d) {
+        return color(d.name);
+      });
+
+    legend.append('text')
+      .attr('x', 64)
+      .attr('y', function(d, i) {
+        return (i * 20) + 9;
+      })
+      .text(function(d) {
+        return d.name;
+      });
+
+    svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+    svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+
+    svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("GitHub stars");
+
+    var curve = svg.selectAll(".stars")
+      .data(data)
+      .enter().append("g")
+      .attr("class", "stars");
+
+    curve.append("path")
+      .attr("class", "line")
+      .attr("d", function(d) {
+        return line(d.values);
+      })
+      .style("stroke", function(d) {
+        return color(d.name);
+      });
+
+    curve.append("text")
+      .datum(function(d) {
+        return {
+          name: d.name,
+          value: d.values[d.values.length - 1]
+        };
+      })
+      .attr("transform", function(d) {
+        return "translate(" + x(d.value.time) + "," + y(d.value.stars) + ")";
+      })
+      .attr("x", 3)
+      .attr("dy", ".35em")
+      .text(function(d) {
+        return d.name;
+      });
+
+    var mouseG = svg.append("g")
+      .attr("class", "mouse-over-effects");
+
+    mouseG.append("path") // this is the black vertical line to follow mouse
+      .attr("class", "mouse-line")
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("opacity", "0");
+
+    var lines = document.getElementsByClassName('line');
+
+    var mousePerLine = mouseG.selectAll('.mouse-per-line')
+      .data(data)
+      .enter()
+      .append("g")
+      .attr("class", "mouse-per-line");
+
+    mousePerLine.append("circle")
+      .attr("r", 7)
+      .style("stroke", function(d) {
+        return color(d.name);
+      })
+      .style("fill", "none")
+      .style("stroke-width", "1px")
+      .style("opacity", "0");
+
+    mousePerLine.append("text")
+      .attr("transform", "translate(-6,-4)")
+      .style("text-anchor", "end");
+
+    mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
+      .attr('width', width) // can't catch mouse events on a g element
+      .attr('height', height)
+      .attr('fill', 'none')
+      .attr('pointer-events', 'all')
+      .on('mouseout', function() { // on mouse out hide line, circles and text
+        d3.select(".mouse-line")
+          .style("opacity", "0");
+        d3.selectAll(".mouse-per-line circle")
+          .style("opacity", "0");
+        d3.selectAll(".mouse-per-line text")
+          .style("opacity", "0");
+      })
+      .on('mouseover', function() { // on mouse in show line, circles and text
+        d3.select(".mouse-line")
+          .style("opacity", "1");
+        d3.selectAll(".mouse-per-line circle")
+          .style("opacity", "1");
+        d3.selectAll(".mouse-per-line text")
+          .style("opacity", "1");
+      })
+      .on('mousemove', function() { // mouse moving over canvas
+        var mouse = d3.mouse(this);
+        d3.select(".mouse-line")
+          .attr("d", function() {
+            var d = "M" + mouse[0] + "," + height;
+            d += " " + mouse[0] + "," + 0;
+            return d;
+          });
+
+        d3.selectAll(".mouse-per-line")
+          .attr("transform", function(d, i) {
+            var xDate = x.invert(mouse[0]);
+            var bisect = d3.bisector(function(d) { return d.time; }).right;
+            var idx = bisect(d.values, xDate);
+            var below = d.values[idx - (idx > 0)];
+            var above = d.values[idx - (idx == d.values.length)];
+            var interp = below.time == above.time ? 0 : (xDate - below.time) / (above.time - below.time);
+            var val = d3.interpolateNumber(below.stars, above.stars)(interp);
+
+            d3.select(this).select('text')
+              .text(d.values[idx == 0 ? 0 : idx - 1].stars);
+
+            return "translate(" + mouse[0] + "," + y(val) +")";
+          });
+      });
+  </script><svg width="950" height="500"><g transform="translate(50,20)"><g class="legend"><rect x="50" y="0" width="10" height="10" style="fill: rgb(31, 119, 180);"></rect><text x="64" y="9">pdfarranger/pdfarranger</text></g><g class="x axis" transform="translate(0,450)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="currentColor" d="M0.5,6V0.5H800.5V6"></path><g class="tick" opacity="1" transform="translate(36.79097823867473,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">2016</text></g><g class="tick" opacity="1" transform="translate(183.13770320337824,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">2017</text></g><g class="tick" opacity="1" transform="translate(329.08457372828747,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">2018</text></g><g class="tick" opacity="1" transform="translate(475.0314442531967,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">2019</text></g><g class="tick" opacity="1" transform="translate(620.978314778106,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">2020</text></g><g class="tick" opacity="1" transform="translate(767.3250397428095,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">2021</text></g></g><g class="y axis" fill="none" font-size="10" font-family="sans-serif" text-anchor="end"><path class="domain" stroke="currentColor" d="M-6,450.5H0.5V0.5H-6"></path><g class="tick" opacity="1" transform="translate(0,450.5)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0</text></g><g class="tick" opacity="1" transform="translate(0,413.7922750632188)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">50</text></g><g class="tick" opacity="1" transform="translate(0,377.0845501264377)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">100</text></g><g class="tick" opacity="1" transform="translate(0,340.3768251896566)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">150</text></g><g class="tick" opacity="1" transform="translate(0,303.6691002528754)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">200</text></g><g class="tick" opacity="1" transform="translate(0,266.9613753160943)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">250</text></g><g class="tick" opacity="1" transform="translate(0,230.25365037931317)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">300</text></g><g class="tick" opacity="1" transform="translate(0,193.545925442532)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">350</text></g><g class="tick" opacity="1" transform="translate(0,156.83820050575082)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">400</text></g><g class="tick" opacity="1" transform="translate(0,120.1304755689697)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">450</text></g><g class="tick" opacity="1" transform="translate(0,83.42275063218858)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">500</text></g><g class="tick" opacity="1" transform="translate(0,46.715025695407405)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">550</text></g><g class="tick" opacity="1" transform="translate(0,10.007300758626286)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">600</text></g></g><text transform="rotate(-90)" y="6" dy=".71em" style="text-anchor: end;">GitHub stars</text><g class="stars"><path class="line" d="M38.095238095238095,450L38.095242723183,449.2658455012644L43.742580424494534,448.53169100252876L70.19862084939427,447.79753650379314L143.39179556388447,447.0633820050575L153.29793940076266,446.32922750632184L193.71300476161326,445.5950730075862L211.45921122374935,444.8609185088506L279.66789952978513,444.126764010115L285.2378903878989,443.3926095113794L362.7947589812833,442.6584550126438L365.71053087746645,441.9243005139082L402.67626857403343,441.19014601517256L404.0892310609319,440.45599151643694L409.195214906978,439.72183701770126L410.14231457590176,438.98768251896564L413.5911377941908,438.25352802023L418.359425128462,437.5193735214944L443.90700459645,436.7852190227588L455.98983752817867,436.05106452402316L457.5879178112782,435.31691002528754L459.5941782070562,434.5827555265519L467.265542984636,433.8486010278163L467.3687045045139,433.1144465290807L467.39754122921715,432.380292030345L467.6197057243829,431.64613753160944L467.66087592225807,430.9119830328738L467.85835958724533,430.1778285341382L469.3041434594103,429.4436740354026L469.3643298829001,428.70951953666696L469.5265810033255,427.97536503793134L473.652171744801,427.2412105391957L474.3129450903957,426.50705604046004L474.97630082924746,425.7729015417244L475.30006259891337,425.0387470429888L475.4096569622092,424.3045925442532L475.42312890982777,423.57043804551756L475.6274110258805,422.83628354678194L476.08574880543966,422.1021290480463L476.3851907246296,421.3679745493107L477.21007099655657,420.6338200505751L477.39224079185306,419.89966555183946L477.8948263526491,419.16551105310384L479.61087295137776,418.4313565543682L479.9373328129232,417.6972020556326L480.0060207712036,416.963047556897L481.8494978328922,416.22889305816136L482.33145201530164,415.49473855942574L485.1189650463869,414.7605840606901L489.2931723490897,414.0264295619545L490.8869347595928,413.2922750632188L503.7757890877605,412.5581205644832L505.2900526606851,411.8239660657476L507.3006077893349,411.08981156701196L508.8082348892657,410.35565706827634L509.46854081242503,409.6215025695407L511.4262031587553,408.8873480708051L511.43170578524735,408.1531935720695L511.44044334522806,407.41903907333386L511.4856861346196,406.68488457459824L511.5146385579455,405.9507300758627L511.5153790291303,405.216575577127L511.5366814595281,404.4824210783914L511.5795917646875,403.74826657965576L511.58124856896353,403.01411208092014L511.58280355845164,402.2799575821845L511.5890327722938,401.5458030834489L511.6456973297109,400.8116485847133L511.6502789951669,400.07749408597766L511.6698089226661,399.343339587242L511.69525799169884,398.60918508850636L511.7206931768968,397.87503058977074L511.8109566143245,397.1408760910351L511.82260515165046,396.4067215922995L511.83001449144336,395.6725670935639L511.87881617046685,394.93841259482826L511.9157749384784,394.2042580960927L512.0229535145339,393.4701035973571L512.0443485038298,392.73594909862146L512.6702456566203,392.00179459988584L512.6933020781371,391.26764010115016L512.759092942907,390.53348560241454L512.8790122512861,389.7993311036789L513.1694620735256,389.0651766049433L513.221581989046,388.3310221062077L513.838098297514,387.59686760747206L513.9315226213116,386.86271310873644L514.2198250771152,386.12855861000077L515.1693729288937,385.39440411126515L516.6499126672954,384.6602496125295L517.9646701633093,383.9260951137939L518.7215150171875,383.1919406150583L519.7030651079843,382.4577861163227L519.8402235111346,381.7236316175871L519.8569489040214,380.9894771188515L519.8844527805919,380.25532262011586L519.9393355792206,379.52116812138024L519.9898588537488,378.7870136226446L520.053442188799,378.05285912390895L520.3657220271554,377.3187046251733L521.6735098381423,376.5845501264377L523.6911040709927,375.8503956277021L524.0481592763052,375.11624112896646L524.5051179282826,374.38208663023084L525.1484068980262,373.6479321314952L525.9411923720368,372.91377763275955L525.9495041610862,372.1796231340239L526.2643247411955,371.4454686352883L526.2772505913152,370.71131413655274L526.3217899330813,369.9771596378171L526.4023346862083,369.2430051390815L526.4464436290981,368.5088506403459L527.0915606370792,367.77469614161026L527.127626211724,367.04054164287464L527.2068381167185,366.306387144139L527.6712894114971,365.5722326454034L527.9796910320232,364.8380781466677L528.0249477052494,364.1039236479321L528.1224538764534,363.3697691491965L528.3914948255622,362.63561465046087L528.5574529298565,361.90146015172525L528.9100699360051,361.1673056529896L528.984968596348,360.433151154254L529.2445824216853,359.69899665551833L529.9568694220179,358.96484215678277L530.7558609701462,358.23068765804715L530.856398445263,357.4965331593115L532.7475757350876,356.7623786605759L533.4518980422387,356.0282241618403L534.2572530146114,355.29406966310466L535.4087597541004,354.55991516436904L535.4530862104008,353.8257606656334L535.4755548829146,353.0916061668978L535.9252013819421,352.3574516681622L539.0489484942121,351.62329716942656L539.1039377355737,350.8891426706909L539.4523479398038,350.15498817195527L540.7890141269979,349.42083367321965L541.3965522223502,348.686679174484L541.4195993879772,347.9525246757484L541.6903295369763,347.2183701770128L541.8338837599854,346.48421567827717L541.9206021916157,345.75006117954155L545.3305506727025,345.0159066808059L545.4647194234441,344.2817521820703L547.8493420828773,343.5475976833347L548.8534904286454,342.81344318459907L552.6065084655418,342.07928868586345L556.0384211731479,341.3451341871278L557.110447586838,340.6109796883922L557.6872422441861,339.8768251896566L559.1990715180907,339.14267069092097L559.484263994918,338.40851619218535L561.7758649617602,337.67436169344967L562.0170225428162,336.94020719471405L573.8479194098051,336.2060526959784L575.7353619480914,335.4718981972428L575.8735199873412,334.7377436985072L576.3270585880338,334.00358919977157L576.3660397679687,333.26943470103595L577.0384755347242,332.5352802023003L577.6303480365729,331.8011257035647L578.3210919533726,331.0669712048291L580.0954645417394,330.33281670609347L582.3690998264602,329.59866220735785L582.7747391973858,328.8645077086222L582.777701082125,328.1303532098866L585.1853199997913,327.396198711151L587.0433750879307,326.66204421241537L587.5899862886083,325.92788971367975L588.3863908155346,325.1937352149441L589.7508339280488,324.4595807162085L590.3901012136699,323.7254262174729L591.2065169743656,322.9912717187372L591.7542666494899,322.2571172200016L591.9029069839494,321.522962721266L591.9630795236046,320.7888082225304L592.1332490577624,320.05465372379473L592.2814867610153,319.3204992250591L592.621673107149,318.5863447263235L592.7079380001787,317.85219022758787L593.2317935957583,317.11803572885225L593.2675722378191,316.38388123011663L593.9113702815022,315.649726731381L594.054693107266,314.9155722326454L594.640507629234,314.18141773390977L596.433433648725,313.44726323517415L597.4250541476351,312.7131087364385L597.4573803427967,311.9789542377029L597.5124482592216,311.2447997389673L597.5450151075183,310.51064524023167L597.9154450736064,309.776490741496L597.9658943010161,309.0423362427604L598.2135448887739,308.3081817440248L598.9830008925182,307.5740272452892L599.2066000506046,306.8398727465535L600.6284389358309,306.1057182478179L601.1154838576359,305.37156374908227L602.0222602426022,304.63740925034665L603.3422519443036,303.90325475161103L603.45158251474,303.1691002528754L606.1206525518709,302.4349457541398L606.1781779070403,301.70079125540417L609.5287405991058,300.96663675666855L610.8031609273274,300.23248225793293L611.8613359019168,299.4983277591973L612.3656384302726,298.7641732604617L614.726917735605,298.03001876172607L614.9194032200949,297.29586426299045L616.1095625554306,296.56170976425483L616.6788182905284,295.8275552655192L618.4120669604691,295.0934007667836L618.5447825365105,294.35924626804797L620.2919104132213,293.62509176931235L624.1420412460049,292.89093727057667L628.0572548679876,292.15678277184105L628.249518211122,291.42262827310543L629.5340968784101,290.6884737743698L630.2612442098327,289.9543192756342L631.0206159216291,289.22016477689857L631.4879920775877,288.48601027816295L632.8227052720321,287.75185577942733L633.0812361582615,287.0177012806917L633.4582239222801,286.2835467819561L634.8433585764645,285.54939228322047L640.7625278776627,284.81523778448485L642.3782406308503,284.0810832857493L642.6655527064443,283.34692878701367L644.6167266740176,282.612774288278L645.9989734905814,281.87861978954237L647.8543212309514,281.14446529080675L648.3934814403318,280.41031079207113L648.6321584429188,279.67615629333545L648.8325484573064,278.94200179459983L650.3030362993743,278.2078472958642L650.3371905327735,277.4736927971286L650.8126331967015,276.739538298393L651.0715667141378,276.00538379965735L652.1651871187547,275.27122930092173L654.9283016243007,274.5370748021861L655.8412100362661,273.8029203034505L656.5801678830863,273.0687658047149L657.7136395212805,272.33461130597925L658.2959830845698,271.6004568072437L658.33568622391,270.86630230850807L660.6489228331833,270.13214780977245L661.879724780675,269.39799331103677L662.4662890297177,268.66383881230115L662.5219446951455,267.92968431356553L662.7116256450229,267.1955298148299L662.7737789450974,266.4613753160943L663.2130634754826,265.7272208173586L663.4490377582449,264.993066318623L663.5712340155172,264.2589118198874L664.1355795010709,263.52475732115175L664.3609372782211,262.79060282241613L664.8070896788453,262.0564483236805L665.0357795763272,261.3222938249449L666.2161739479134,260.5881393262093L666.760045405207,259.8539848274737L667.1640927630853,259.1198303287381L667.7072700286434,258.38567583000247L667.7311826199676,257.65152133126685L668.118708214535,256.91736683253123L668.721919181401,256.18321233379555L668.7584382946465,255.44905783505993L669.3479366607589,254.7149033363243L669.7682003375844,253.9807488375887L670.3449949949326,253.24659433885307L670.7216078954137,252.5124398401174L671.6541711893909,251.7782853413818L671.8405940660551,251.04413084264618L673.1132881708272,250.30997634391056L673.2664962869081,249.57582184517494L673.6185995911724,248.84166734643932L674.6623816571071,248.1075128477037L674.8073612871468,247.37335834896808L675.1736029630958,246.63920385023246L675.2839748211359,245.90504935149684L675.5514145013075,245.17089485276122L676.3102216038254,244.43674035402563L676.3390583285286,243.70258585529L676.4656279937361,242.9684313565544L676.4867823298971,242.2342768578187L677.8961720433289,241.5001223590831L679.1227718168469,240.76596786034747L679.2935059602831,240.03181336161185L680.1785263762509,239.2976588628762L680.241383123951,238.56350436414058L681.8202620636395,237.82934986540496L683.0865233249935,237.09519536666934L683.4301204665223,236.36104086793372L683.4344846185678,235.6268863691981L684.9004833540779,234.89273187046248L688.0435382524918,234.15857737172686L688.0715280632775,233.42442287299124L688.1184322848898,232.69026837425565L689.113361764407,231.95611387552003L689.4165939704743,231.2219593767844L689.8864738446265,230.4878048780488L689.9264130091568,229.75365037931317L691.4724011444055,229.0194958805775L693.3317751968427,228.28534138184187L693.4518657391832,227.55118688310625L693.880496740397,226.81703238437063L694.2606546466754,226.08287788563504L694.3232614853506,225.34872338689937L695.9167832427188,224.6145688881638L697.1580258339162,223.88041438942813L698.7748030144321,223.1462598906925L698.9345735563883,222.41210539195689L699.4315963274084,221.67795089322127L699.4658801432649,220.94379639448564L700.243976520147,220.20964189575005L700.5117031329028,219.47548739701443L700.8478307713548,218.7413328982788L700.8918008758974,218.0071783995432L700.9880251063628,217.27302390080752L701.04102895936,216.5388694020719L701.0754053341146,215.80471490333628L701.8636507941734,215.07056040460066L702.9222145161348,214.33640590586506L703.1194436441522,213.60225140712944L703.1960777838345,212.86809690839382L703.936442525906,212.1339424096582L704.5699572760102,211.39978791092258L704.8466250783224,210.6656334121869L705.6477778767213,209.9314789134513L706.2935104013748,209.19732441471567L706.6180357819499,208.46316991598007L706.7714151319923,207.72901541724445L706.7715076908904,206.99486091850883L707.3367926492598,206.26070641977321L707.852961228352,205.5265519210376L708.9201560675613,204.79239742230197L709.1993692395713,204.0582429235663L709.2459772727099,203.32408842483068L710.0067188561981,202.58993392609509L710.817377453432,201.85577942735947L711.0302814308427,201.12162492862385L712.2935160162289,200.38747042988822L712.3195667180993,199.6533159311526L712.6767191102549,198.91916143241698L713.0436364661601,198.18500693368136L713.115027144265,197.45085243494574L713.4535983376269,196.7166979362101L714.7291478844054,195.98254343747448L715.080112714223,195.24838893873886L715.5972115102411,194.51423444000324L715.8497121842594,193.78007994126762L716.3176112979922,193.045925442532L716.7854918999456,192.31177094379638L716.8141573906872,191.57761644506076L717.4817106755678,190.84346194632514L717.5367832199377,190.1093074475895L717.5518656923831,189.37515294885387L717.7622474398207,188.64099845011825L717.9233045504606,187.90684395138263L718.0739163894497,187.172689452647L718.3474464451164,186.4385349539114L719.864195224455,185.70438045517577L722.6786567787223,184.97022595644015L723.2302800437319,184.23607145770453L723.5169627188187,183.50191695896888L723.9713158378146,182.76776246023326L723.9870230828222,182.03360796149764L724.3300185915134,181.29945346276202L725.258463014525,180.5652989640264L725.4484216410967,179.83114446529078L725.5804939327963,179.09698996655516L726.3911941815343,178.36283546781954L726.6983555128257,177.62868096908392L727.2541161605807,176.89452647034827L728.08935840115,176.16037197161265L728.4838259130747,175.42621747287703L728.6677820951047,174.6920629741414L729.378666828131,173.9579084754058L729.4125665245604,173.22375397667017L729.7766932296878,172.48959947793455L730.3006506400552,171.75544497919893L730.7754685314212,171.02129048046334L731.4563271579037,170.28713598172766L731.6113170327731,169.55298148299204L732.1566231529874,168.81882698425642L733.0506819453548,168.0846724855208L734.073633631272,167.35051798678518L734.2635413504497,166.61636348804956L735.1188364762925,165.88220898931394L735.2366084182356,165.14805449057835L735.2605117536701,164.41389999184273L735.5266787489928,163.67974549310705L736.9900303000173,162.94559099437143L737.5823933640258,162.2114364956358L737.7570057252925,161.4772819969002L737.858876048542,160.74312749816457L738.4837689372881,160.00897299942895L738.5504715072042,159.27481850069336L739.8930059285381,158.54066400195774L739.9990228904223,157.80650950322212L740.4444533316413,157.0723550044865L740.6020903909964,156.33820050575082L740.6145303069011,155.6040460070152L740.9892272381916,154.86989150827958L741.2357486073926,154.13573700954396L741.478442666157,153.40158251080837L742.9863057912779,152.66742801207275L743.1520371262718,151.93327351333713L744.2764472483419,151.1991190146015L744.2942972318407,150.4649645158659L744.2962641084252,149.7308100171302L744.303492958367,148.9966555183946L744.3268039168536,148.26250101965897L744.3526741288726,147.52834652092338L744.3863192883322,146.79419202218776L744.4130919496077,146.06003752345214L744.696530435316,145.32588302471652L744.7407365650489,144.5917285259809L745.0088010177827,143.85757402724528L745.0993051083454,143.1234195285096L745.3944754343879,142.38926502977398L745.6025894888222,141.6551105310384L745.8125963727224,140.92095603230277L745.9754074744812,140.18680153356715L746.7685122766903,139.45264703483153L746.7847980148111,138.7184925360959L746.9744234293496,137.9843380373603L747.0167367296164,137.25018353862467L747.4362877029264,136.516029039889L747.4648004714862,135.7818745411534L747.4745006440072,135.04772004241778L747.5044665872672,134.31356554368216L748.658472417005,133.57941104494654L748.6679967276194,132.84525654621092L748.6962549592096,132.1111020474753L750.9078757822032,131.37694754873968L751.8935077204062,130.64279305000406L752.6546982145502,129.90863855126838L752.6560819700768,129.1744840525328L752.7757143458718,128.44032955379717L753.0623461135646,127.70617505506155L753.922246044588,126.97202055632593L754.2031669282678,126.23786605759031L754.2057261818004,125.50371155885469L754.3151863346941,124.76955706011907L754.65624273447,124.03540256138345L755.0783529613125,123.30124806264784L755.1608090556854,122.56709356391217L756.0545809154686,121.83293906517656L756.5563010505674,121.09878456644094L756.6479806391359,120.36463006770532L756.7616475939484,119.6304755689697L757.2124788468715,118.89632107023408L757.4383410700163,118.16216657149846L757.4850231502733,117.42801207276285L758.0539688130625,116.69385757402723L758.7062776474261,115.95970307529157L759.0408919478941,115.22554857655595L759.0803822017687,114.49139407782033L759.6058483221752,113.75723957908471L759.7368515586018,113.02308508034909L759.7926599462115,112.28893058161347L760.2124932241609,111.55477608287786L760.6373848458912,110.82062158414224L760.8319390217537,110.08646708540662L761.7638034960502,109.35231258667096L762.2246681335273,108.61815808793534L763.7207901624242,107.88400358919972L765.9268343118073,107.1498490904641L766.2947883273712,106.41569459172848L767.4597299909195,105.68154009299288L768.288437573283,104.94738559425726L768.5159056933098,104.21323109552164L768.7075581477169,103.47907659678602L768.710621847244,102.74492209805035L769.2946407265889,102.01076759931473L771.4534659541059,101.27661310057911L771.4536788395716,100.54245860184349L772.1843341532323,99.80830410310789L772.361811212395,99.07414960437227L772.9098061685992,98.33999510563665L773.413576483291,97.60584060690103L774.1818755008092,96.8716861081654L774.6938835574317,96.13753160942974L775.1497824100259,95.40337711069412L775.8089220910691,94.6692226119585L775.8534336651657,93.9350681132229L775.9248243432706,93.20091361448728L776.6526242149249,92.46675911575166L776.663046346851,91.73260461701604L776.6970478580682,90.99845011828042L776.7064703538948,90.26429561954481L776.7251903910358,89.53014112080913L776.8917871517268,88.79598662207351L776.9932224481553,88.06183212333791L776.9964296139743,87.32767762460229L777.0271036328049,86.59352312586667L777.0273535418298,85.85936862713105L777.0274044492237,85.12521412839543L777.0435791166668,84.39105962965982L777.0755443321258,83.6569051309242L777.1006972126846,82.92275063218858L777.1369988125197,82.18859613345292L777.1605596800312,81.4544416347173L777.2615599496385,80.72028713598168L777.4238203259536,79.98613263724606L777.7980313230291,79.25197813851044L778.9959609778604,78.51782363977483L779.0124086940529,77.78366914103921L779.4071399988372,77.04951464230359L779.4822515446459,76.31536014356797L779.4921831144121,75.58120564483231L779.7740573547425,74.84705114609669L779.9543759720771,74.11289664736107L780.1091807291501,73.37874214862545L780.2302709075902,72.64458764988984L780.2570204291412,71.91043315115422L780.2989588658706,71.1762786524186L780.4076831755243,70.44212415368298L780.5687587979438,69.70796965494736L780.7273954933983,68.9738151562117L780.816386245977,68.23966065747608L781.0146474057084,67.50550615874046L781.1905694753832,66.77135166000484L782.1733367156901,66.03719716126923L782.6160736929743,65.30304266253361L782.6312579802076,64.568888163798L782.6582203872243,63.83473366506237L782.8925934010496,63.10057916632676L783.1688400603755,62.36642466759109L783.1808680891837,61.63227016885548L783.3965858570967,60.89811567011986L783.4197903728506,60.16396117138424L783.5393209338575,59.429806672648624L783.8538083019337,58.695652173913004L784.0181558814011,57.961497675177384L784.5077415449589,57.22734317644177L784.7399579364583,56.49318867770615L784.7687992891065,55.75903417897049L784.9563698961072,55.02487968023487L785.5586413901575,54.29072518149925L785.6383160896424,53.556570682763635L785.8953938011717,52.822416184028015L786.0823488915,52.088261685292395L786.1421835911772,51.35410718655678L786.6395488301204,50.61995268782116L786.6491286760738,49.88579818908555L786.9668139540793,49.15164369034988L787.5139157169167,48.41748919161426L787.7231034545689,47.683334692878645L787.8594843629751,46.949180194143025L787.9552689386744,46.215025695407405L788.5403938968517,45.48087119667179L788.7190048025162,44.74671669793617L788.7782471252455,44.01256219920056L788.8583013162126,43.27840770046494L788.9942425698529,42.54425320172932L789.008852991918,41.810098702993656L789.3355627624883,41.075944204258036L789.5150714894645,40.341789705522416L789.9334238250441,39.6076352067868L790.1678755139327,38.87348070805118L791.3741077019237,38.13932620931556L791.581967219388,37.40517171057995L791.8610369251061,36.67101721184433L792.2335633502362,35.93686271310872L792.515173797707,35.20270821437305L792.8458589729507,34.46855371563743L793.2602775553612,33.734399216901814L793.4930354164146,33.00024471816619L793.9672516749428,32.26609021943057L794.2113433730686,31.53193572069496L794.2609364306709,30.79778122195934L794.2896389449718,30.063626723223724L794.3669163689959,29.329472224488107L794.3696329726552,28.59531772575244L794.394299918999,27.86116322701682L794.5814493830134,27.127008728281204L795.5691407566992,26.392854229545588L796.4988347248352,25.65869973080997L796.7085916997106,24.92454523207435L796.7929035999904,24.190390733338734L796.8681308444216,23.456236234603118L797.2394586318212,22.7220817358675L797.2505842113729,21.98792723713183L797.8288412993111,21.253772738396215L798.0015608311115,20.5196182396606L798.1524873703543,19.785463740924982L798.203714092508,19.05130924218936L798.2406589766848,18.317154743453745L798.3140674387683,17.58300024471813L798.633839919926,16.84884574598251L798.6580903512283,16.114691247246892L798.7614369889025,15.380536748511226L798.8378443592845,14.646382249775607L798.9239519021874,13.91222775103999L799.1476065956126,13.178073252304372L799.7545569419619,12.443918753568756L799.83383826613,11.709764254833138L799.855034253795,10.975609756097521L800,10.975609756097521" style="stroke: rgb(31, 119, 180);"></path><text transform="translate(800,10.975609756097521)" x="3" dy=".35em">pdfarranger/pdfarranger</text></g><g class="mouse-over-effects"><path class="mouse-line" style="stroke: black; stroke-width: 1px; opacity: 0;" d="M770,450 770,0"></path><g class="mouse-per-line" transform="translate(770,101.77089515556636)"><circle r="7" style="stroke: rgb(31, 119, 180); fill: none; stroke-width: 1px; opacity: 0;"></circle><text transform="translate(-6,-4)" style="text-anchor: end; opacity: 0;">474</text></g><rect width="800" height="450" fill="none" pointer-events="all"></rect></g></g></svg>
+
+
+</body></html>
